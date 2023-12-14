@@ -1,0 +1,30 @@
+.episodetable {
+    border: 1px solid white;
+    margin: 10px 0px;
+  }
+
+.episodestilholder {
+    width: 200px;
+    /* max-width: 20%; */
+    margin: 20px;
+}
+
+.episodeoverview {
+    padding: 20px;
+    width: 800px;
+}
+
+
+.epsiodeproperties  {
+    width: 150px;
+    max-width: 20%;
+}
+
+.episodestills {
+    height: 100%;
+    width: 100%;
+}
+
+#seasonselect {
+    margin-left: 10px;
+}
