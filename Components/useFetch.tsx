@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { API_KEY } from '@env';
-import { FetchResponse, ApiResponse } from '../types';
+import { FetchResponse, ApiResponse } from '../Types/types';
 
- const useFetch = (param: string): FetchResponse => {
+const useFetch = (param: string): FetchResponse => {
     const [data, setData] = useState<ApiResponse | null>(null);
     const [loading, setLoading] = useState<boolean>(true);
 

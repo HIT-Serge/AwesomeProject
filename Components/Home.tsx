@@ -1,8 +1,8 @@
 
 import { FlatList, Image, SafeAreaView, ScrollView, StatusBar, StyleSheet, Text, TouchableWithoutFeedback, useColorScheme, TextInput, View, SectionList, } from 'react-native';
-import { ApiResponse, FetchResponse, SerieObject, } from "../types";
+import { ApiResponse, FetchResponse, SerieObject, } from "../Types/types";
 import React, { useState, useEffect, useContext, createContext, } from 'react';
-import styles from '../styles';
+import styles from '../Styles/styles';
 import Overview from './Overview';
 import Details from "./Details";
 

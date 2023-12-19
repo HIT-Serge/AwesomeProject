@@ -1,31 +1,5 @@
-import {
-    FlatList,
-    Image,
-    ImageSourcePropType,
-    SafeAreaView,
-    ScrollView,
-    StatusBar,
-    StyleSheet,
-    Text,
-    TouchableWithoutFeedback,
-    TouchableHighlight,
-    useColorScheme,
-    View,
-    SectionList,
-} from 'react-native';
 
-import React, { useState, useEffect, useContext, createContext, } from 'react';
-import { ApiResponse, FetchResponse, SerieDetailObject, SerieObject, Season, } from "../types";
-import useFetch from "./useFetch";
-import styles from "../styles";
-import { StateContext } from './Home';
-import SelectDropdown from 'react-native-select-dropdown';
-import Episodes from './Episodes';
-
-type DropDownProps = {
-    showID: number | undefined,
-
-}
+// COMPONENTS
 export default function DropDown({ showID }: DropDownProps): JSX.Element {
 
     const response = useFetch(`https://api.themoviedb.org/3/tv/${showID}`) as FetchResponse;
@@ -65,3 +39,33 @@ export default function DropDown({ showID }: DropDownProps): JSX.Element {
         </View>
     )
 }
+
+// TYPES
+type DropDownProps = {
+    showID: number | undefined,
+
+}
+// STYLES
+const styles = StyleSheet.create({
+    sectionTitle: {
+        fontSize: 24,
+        fontWeight: '600',
+        color: 'white',
+        width: '100%',
+        marginVertical: 10,
+
+    },
+
+})
+
+// IMPORTS
+import { FlatList, Image, SafeAreaView, ScrollView, StatusBar, StyleSheet, Text, TouchableWithoutFeedback, useColorScheme, TextInput, View, SectionList, } from 'react-native';
+import React, { useState, useEffect, useContext, createContext, } from 'react';
+import { ApiResponse, FetchResponse, SerieDetailObject, SerieObject, Season, } from "../Types/types";
+import useFetch from "./useFetch";
+// import styles from "../Styles/styles";
+import { StateContext } from './Home';
+import SelectDropdown from 'react-native-select-dropdown';
+import Episodes from './Episodes';
+
+

@@ -1,31 +1,5 @@
-import {
-    FlatList,
-    Image,
-    Text,
-    View,
-} from 'react-native';
 
-import React, { useState, useEffect, useContext, createContext, useRef, PropsWithChildren } from 'react';
-import { ApiResponse, Episode, FetchResponse, SerieDetailObject, SerieObject, SerieEpisodesObject, Season, } from "../types";
-import useFetch from "./useFetch";
-import styles from "../styles";
-
-
-// type EpisodeProps = PropsWithChildren<{
-
-//     showID: number | undefined;
-//     seasonNumber: number | undefined;
-// }
-// >
-
-type EpisodeProps = {
-
-    showID: number | undefined;
-    seasonNumber: number | undefined;
-}
-
-
-
+// COMPONENTS
 export default function Episodes({ showID, seasonNumber }: EpisodeProps) {
 
     // fetchting api themoviedb
@@ -66,3 +40,43 @@ export default function Episodes({ showID, seasonNumber }: EpisodeProps) {
         )
     }
 }
+
+// TYPES
+
+
+type EpisodeProps = {
+
+    showID: number | undefined;
+    seasonNumber: number | undefined;
+}
+
+
+// type EpisodeProps = PropsWithChildren<{
+
+//     showID: number | undefined;
+//     seasonNumber: number | undefined;
+// }
+// >
+
+
+// STYLES
+
+const styles = StyleSheet.create({
+    episodeContainer: {
+        display: 'flex',
+        flexDirection: 'row',
+        borderWidth: 1,
+        borderColor: 'white',
+        marginVertical: 3,
+        padding: 5,
+    }
+
+})
+
+// IMPORTS
+
+import { FlatList, Image, SafeAreaView, ScrollView, StatusBar, StyleSheet, Text, TouchableWithoutFeedback, useColorScheme, TextInput, View, SectionList, } from 'react-native';
+import React, { useState, useEffect, useContext, createContext, useRef, PropsWithChildren } from 'react';
+import { ApiResponse, Episode, FetchResponse, SerieDetailObject, SerieObject, SerieEpisodesObject, Season, } from "../Types/types";
+import useFetch from "./useFetch";
+// import styles from "../Styles/styles";

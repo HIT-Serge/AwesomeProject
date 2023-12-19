@@ -1,7 +1,7 @@
 import { FlatList, Image, SafeAreaView, ScrollView, StatusBar, StyleSheet, Text, TouchableWithoutFeedback, useColorScheme, TextInput, View, } from 'react-native';
-import { ApiResponse, FetchResponse, SerieObject, } from "../types";
+import { ApiResponse, FetchResponse, SerieObject, } from "../Types/types";
 import React, { useState, useEffect, useContext, createContext, } from 'react';
-import styles from '../styles';
+import styles from '../Styles/styles';
 
 export default function Search(): JSX.Element {
 
